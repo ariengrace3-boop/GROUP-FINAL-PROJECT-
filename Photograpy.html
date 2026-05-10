@@ -1,58 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-       <meta charset="UTF-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                      <title>My Photography Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-                <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Photography Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<header>
-<span class="logo-icon">📷</span>
-           <h1>My Photography Portfolio</h1>
-</header>
-<main>
-<div class="controls">
-             <input type="text" class="search-bar" id="searchInput" placeholder="Search images..."/>
-<div class="filter-btns" id="filterBtns">
-<button class="active" data-cat="all">All</button>
-<button data-cat="Nature">Nature</button>
-<button data-cat="People">People</button>
-<button data-cat="City lights">City lights</button>
-<button data-cat="Sunset">sunset</button>
-</div>
-</div>
-<div class="gallery" id="gallery"></div>
-<div class="add-form">
-                 <h2>Add a New Image</h2>
-<div class="form-group">
-<label>Image URL:</label>
-       <input type="url" id="imgUrl" placeholder="https://example.com/photo.jpg"/>
-</div>
-<div class="form-group">
-<label>Caption:</label>
-<input type="text" id="imgCaption" placeholder="Enter caption"/>
-</div>
-      <div class="form-group">
-               <label>Category:</label>
-     <select id="imgCategory">
-<option value="Nature">Nature</option>
-<option value="People">People</option>
-<option value="City lights">city lights</option>
-<option value="Sunset">sunset</option>
-</select>
-</div>
-       <button class="btn-add" id="addBtn">Add Image</button>
-</div>
-</main>
- 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-<button class="lb-close" id="lbClose">✕</button>
-<img id="lbImg" src="" alt=""/>
-<p class="lb-caption" id="lbCaption"></p>
-</div>
-<script src="script.js"></script>
+
+  <!-- TOP BAR -->
+  <header>
+    <span>📷</span>
+    <h1>My Photography </em></h1>
+   
+  </header>
+
+  <!-- SEARCH + FILTER -->
+  <section class="controls">
+  <input type="text" id="searchInput" placeholder="🔍 Search images..."/>
+
+  <div class="filters">
+   
+       <button class="active" data-cat="All">All</button>
+
+    <div class="filter-box" data-cat="NATURE">
+      <img src="c:\Users\Susan\Downloads\nature.jpg" alt="Nature">
+      <button>NATURE</button>
+    </div>
+
+    <div class="filter-box" data-cat="PEOPLE">
+      <img src="c:\Users\Susan\Downloads\people.jpg" alt="People">
+      <button>PEOPLE</button>
+    </div>
+
+    <div class="filter-box" data-cat="CITY LIGHTS">
+      <img src="c:\Users\Susan\Downloads\city lights.jpg" alt="City Lights">
+      <button>CITY LIGHTS</button>
+    </div>
+
+    <div class="filter-box" data-cat="SUNSET">
+      <img src="c:\Users\Susan\Downloads\sunset.jpg" alt="Sunset">
+      <button>SUNSET</button>
+    </div>
+
+  </div>
+</section>
+
+  <!-- PHOTO GALLERY (cards added by JS) -->
+  <main id="gallery"></main>
+
+  <!-- ADD PHOTO FORM -->
+  <section class="form-section">
+    <div class="form-card">
+      <h2>Add a New Image</h2>
+      <label>Image URL</label>
+      <input type="text" id="imgUrl" placeholder="https://example.com/photo.jpg"/>
+      <label>Caption</label>
+      <input type="text" id="imgCaption" placeholder="Enter caption"/>
+      <label>Category</label>
+      <select id="imgCategory">
+        <option value="NATURE">NATURE</option>
+        <option value="PEOPLE">PEOPLE</option>
+        <option value="CITY LIGHTS">CITY LIGHTS</option>
+        <option value="SUNSET">SUNSET</option>
+
+      </select>
+      <button id="addBtn">＋ Add Image</button>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX POPUP (hidden until a photo is clicked) -->
+  <div id="lightbox">
+    <button id="closeBtn">✕</button>
+    <img id="lbImg" src="" alt=""/>
+    <p id="lbCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
